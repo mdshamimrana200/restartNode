@@ -20,7 +20,7 @@ app.get("/",(req,res)=>{
     res.status(200).send("shamimrana")
 })
 
-// app.use("/users",router)
+app.use("/users",router)
 
 app.use((req,res)=>{
     res.status(404).send("router not found err")
