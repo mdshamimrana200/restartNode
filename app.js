@@ -1,19 +1,12 @@
 require("./model/databaseConnect")
 const express = require("express");
-const cors = require("cors");
-const app = express();
 const routers = require("./routers/userRouters")
-
-
-const corsConfig ={
-    origin: "*",
-    Credential: true,
-    methods : [ "GET","POST","PUT","DELETE"]
-}
-app.options("",cors(corsConfig))
+const app = express();
+const cors = require("cors");
+app.use(cors())
 
 app.use(express.urlencoded({extended:true}))
-app.use(express.json(corsConfig))
+app.use(express.json())
 
 
 
