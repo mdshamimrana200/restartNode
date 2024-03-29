@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json(corsConfig))
 
 app.get("/",(req,res)=>{
-    res.status(200).send("shamimrana")
+    res.status(200).send("shamimrana RANA")
 })
 
 app.use("/users",router)
