@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 app.get("/",(req,res)=>{
-    res.status(200).sendFile(__dirname+ path.join("/../view/index.html"))
+    res.status(200).send("shamimrana")
 })
 
 app.use("/users",router)
