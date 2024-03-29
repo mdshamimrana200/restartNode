@@ -1,17 +1,18 @@
-require("./model/databaseConnect")
-const express = require("express");
 const routers = require("./routers/userRouters")
-const app = express();
+const express = require("express");
 const cors = require("cors");
-app.use(cors())
+const path = require("path");
+const app = express();
+require("./model/databaseConnect")
 
-app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+app.use(cors())
 
 
 
 app.get("/",(req,res)=>{
-    res.status(200).send("shamimrana shamimmmmmmmmmmmmmmm")
+    res.status(200).sendFile(__dirname + "/view/index.html")
 })
 app.use("/users",routers)
 
