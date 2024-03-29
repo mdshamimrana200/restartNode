@@ -10,8 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/",
-      "methods": ["GET", "PORT" , "PATCH" , "DELETE", "OPTIONS"]
+      "dest": "/"
     }
   ]
 }
