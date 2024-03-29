@@ -5,10 +5,15 @@ const router = require("./routers/userRouters");
 const cors = require("cors");
 const app = express();
 
-app.use(cors())
+app.use(cors());
+const corsConfig ={
+    origin: "*",
+    Credential: true,
+    methods : [ "GET","POST","PUT","DELETE"]
+}
 
 app.use(express.urlencoded({extended:true}))
-app.use(express.json())
+app.use(express.json(corsConfig))
 
 app.get("/",(req,res)=>{
     res.status(200).send("shamimrana")
