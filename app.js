@@ -18,7 +18,7 @@ app.use(express.json(corsConfig))
 
 
 app.get("/",(req,res)=>{
-    res.status(200).send("shamimrana RANA")
+    res.status(200).send("shamimrana shamimmmmmmmmmmmmmmm")
 })
 app.use("/users",routers)
 
