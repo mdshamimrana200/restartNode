@@ -1,4 +1,4 @@
-const { configDotenv } = require("dotenv").config()
+ require("dotenv").config()
 
 
 exports.dev ={
